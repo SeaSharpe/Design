@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<script src="js/jquery-1.11.3.js" type="text/javascript"></script>
+		<script src="js/jquery.validate.js" type="text/javascript"></script>
+		<script src="js/jquery-ui.js" type="text/javascript"></script>
+		<script src="js/global.js" type="text/javascript"></script>
+		<script src="js/validation.js" type="text/javascript"></script>
+		<script src="js/util.js" type="text/javascript"></script>
+		<link href="css/main.css" rel="stylesheet" type="text/css" />
+		<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+		<title>Conestoga Video Game Store</title>
+	</head>
+	<body>
+		<header>
+			
+			<span id="logo"><a href="index.html"><img src="img/fullLogo.png" alt="CVGS logo"/></a></span>
+			<span class="headerLinks">
+				<a href="#" >Contacts</a>
+				<a href="#" >Events</a>
+				<a href="#" >Shop</a>
+			</span>
+			<form id="loginForm" method="POST" action="php/login.php">
+				<label for="emailLogin">E-mail: </label>
+				<input type="text" id="emailLogin" name="emailLogin"/>
+				<label for="passwordLogin">Password: </label>
+				<input type="password" id="passwordLogin" name="passwordLogin"/>
+				<input type="submit" id="loginButton" name="loginButton" class="greenButton" value="Login"/><br/>
+				<span id="register"><a href="#" class="aWhite">Register</a></span>
+				<span id="forgot"><a href="#" class="aWhite">Forgot Your Password?</a></span>
+			</form>
+			
+		</header>
+		<section>	
+			<div class="sidebar" id="sidebarLeft">
+				<div id="leftContent">
+				<b>Browse By Platform</b><br>
+				<hr>
+				<a>PS4</a><br>
+				<a>XBOX One</a><br>
+				<a>Wii U</a><br>
+				<a>PC</a><br><br>
+				<b>Browse By Category</b><br>
+				<hr>
+				<a>Action</a><br>
+				<a>Adventure</a><br>
+				<a>MMOs</a><br>
+				<a>RPGs</a><br>
+				<a>Strategy</a><br>
+				<a>Other</a><br><br>
+				<b>Search CVGS</b>
+				<hr>
+				<form id="formSearch">
+					<input type="text" id="txtSearch"/>
+					<input type="submit" id="btnSearchSubmit" class="greenButton"/>
+				</form>
+				</div>		
+			</div>	
+			<div class="sidebar" id="sidebarRight">
+				<div id="rightContent">
+				<b>New Releases</b>
+				<hr>
+				<a><b class="smallFont">Destiny: The Taken King</b></a>
+				<img src="img/destiny.jpg" alt="destiny game"/>
+				<b class="smallFont sidebarCentre">User Score: 5.8<br>Released: Sept. 15/15</b>
+				<p><b>News</b>
+				<hr>
+				</p>
+				
+				<p class="smallFont">PS4's Nier Sequel Being Developed Almost Entirely by Bayonetta Studio Platinum <a>cont'd...</a></p>
+				<br>
+				<p class="smallFont">Witcher 3 Dev "Amazed" at Its Success, Has "No Idea" Where Series Goes Next <a>cont'd...</a></p>
+				
+				</div>
+			</div>
+			<div id="home">
+				Content		
+			</div>
+					
+			
+							
+			
+			
+			
+		</section>
+		<footer>
+			<hr>
+			<div id="foot">&copy; CVGS 2015.  All Rights Reserved.</div>
+		</footer>
+	</body>
+</html>

@@ -20,3 +20,4 @@ Rob and Steve Absent (We had trouble finding a room, they may not have got the m
 
 
 **Next Meeting: November 4th**
+### Meeting moved until class time November 6th

@@ -1,4 +1,8 @@
 # Meetings
+## October 21, 2015
+
+### Meeting canceled due to midterms
+
 ## October 28, 2015
 Rob and Steve Absent (We had trouble finding a room, they may not have got the memo that we found one)
 

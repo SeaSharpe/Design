@@ -8,7 +8,7 @@
 1. [Member Rates/Reviews a Game](#member-ratesreviews-a-game)
 1. [Member Adds Game to Wishlist](#member-adds-game-to-wishlist)
 1. [Member Adds Another User to Their Friends and Family List](#member-adds-another-user-to-their-friends-and-family-list)
-1. [Member Views Another Member’s Wish List](#member-views-another-member’s-wish-list)
+1. [Member Views Another Member’s Wish List](#member-views-another-members-wish-list)
 1. [Employee Logs In](#employee-logs-in)
 1. [Employee Adds Event](#employee-adds-event)
 1. [Employee Edits Event](#employee-edits-event)
@@ -101,7 +101,7 @@
 - Must be logged in as Employee
 - Must be on an event’s page
 - Employee deletes event
- 
+
 # Employee Adds Game
 - Must be logged in as Employee
 - Game must not already exist

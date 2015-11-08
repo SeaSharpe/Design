@@ -22,6 +22,14 @@ Rob and Steve Absent (We had trouble finding a room, they may not have got the m
 ### Moving forward
 - determined that we are aiming to have all components complete by November 6th
 
-
-**Next Meeting: November 4th**
+** Next Meeting: November 4th **
 ### Meeting moved until class time November 6th
+
+## November 6th
+Nicole absent (injured), Manny absent (busy)
+
+### During Meeting
+- Completed Data Validation document
+- Noted similarities to Dan's Data Dictionary document, Dan planning to adjust
+
+** Next Meeting November 11th **

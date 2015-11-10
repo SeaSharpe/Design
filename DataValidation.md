@@ -120,6 +120,6 @@
 |    memberId     |    int         |    FK Members Table   NOT NULL    |                                |
 |    approverId   |    int         |    FK Employees Table             |    Null if not yet Assessed    |
 |    rating       |    float       |    0 < VALUE < 1   NOT NULL       |                                |
-|    subjectText  |    string      |                                   |    Null if just a rating       |
+|    subjectText  |    string      |    Characters (1, 500)            |    Null if just a rating       |
 |    contextText  |    string      |    Characters (0, 4000)           |    Null if just a rating       |
 |    isApproved   |    boolean     |    NOT NULL,   DEFAULT FALSE      |                                |

@@ -41,7 +41,7 @@ namespace LoginExample.Models
         public bool IsEmailVerified { get; set; }
         public bool IsEmailMarketingAllowed { get; set; }
         public int StripeID { get; set; }
-        public virtual Game WishList { get; set; }
+        //public virtual List<Game> WishList { get; set; }
     }
 
     public class Employee
@@ -104,6 +104,7 @@ namespace LoginExample.Models
         public virtual List<Category> Categories { get; set; }
         public virtual List<Review> Reviews { get; set; }
         public virtual Platform Platform { get; set; }
+        //public virtual List<Member> WishList { get; set; }
     }
 
     public class Review

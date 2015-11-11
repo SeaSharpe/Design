@@ -22,11 +22,13 @@ namespace LoginExample.Models
         public virtual DbSet<Friendship> Friendships { get; set; }
         public virtual DbSet<Platform> Platforms { get; set; }
         public virtual DbSet<Category> Catagories { get; set; }
-        public virtual DbSet<WishList> WishList { get; set; }
+        public virtual DbSet<WishList> WishLists { get; set; }
+        public virtual DbSet<OrderItem> OrderItems { get; set; }
     }
 
     public class Member
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity), Range(10000000, 19999999)]
         public int Id { get; set; }
         public string UserID { get; set; }
         public string DisplayName { get; set; }
@@ -74,18 +76,20 @@ namespace LoginExample.Models
 
     public class OrderItem
     {
-        [Key]
+        [Key, Column("Game_Id", Order = 0)]
+        public int GameId { get; set; }
+        [Key, Column("Order_Id", Order = 1)]
+        public int OrderId { get; set; }
         public virtual Game Game { get; set; }
-        [Key]
         public virtual Order Order { get; set; }
         public decimal SalePrice { get; set; }
     }
 
     public class WishList
     {
-        [Key, Column(Order = 0)]
+        [Key, Column("Member_Id", Order = 0)]
         public int MemberId { get; set; }
-        [Key, Column(Order = 1)]
+        [Key, Column("Game_Id", Order = 1)]
         public int GameId { get; set; }
         public virtual Game Game { get; set; }
         public virtual Member Member { get; set; }

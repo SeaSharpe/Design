@@ -37,17 +37,6 @@ Diagram: Diagram 1
 
 ![Diagram 1 diagram screenshot](https://cloud.githubusercontent.com/assets/3138467/11080584/49606ef4-87e3-11e5-8467-c02e170a7f5b.png)
 
-### Diagram 1 Diagram Summary: 
-
-  ------------------------ ----
-  Not Started              0
-  Not Applicable           8
-  Needs Investigation      0
-  Mitigation Implemented   37
-  Total                    45
-  Total Migrated           0
-  ------------------------ ----
-
 ### Interaction: HTTPS 
 
 ![HTTPS interaction screenshot](https://cloud.githubusercontent.com/assets/3138467/11080604/852ca6a0-87e3-11e5-8bc2-ad5a9a7b6daf.png)

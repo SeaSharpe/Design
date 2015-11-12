@@ -248,7 +248,7 @@ Diagram: Diagram 1
 
   **Description:**     Web Server may be spoofed by an attacker and this may lead to unauthorized access to Stripe Web Service. Consider using a standard authentication mechanism to identify the source process.
 
-  **Justification:**   Stripe provides credentails for the server, as long as those credentials are not leaked, the web service cannot be spoofed in this manner.
+  **Justification:**   Stripe provides credentials for the server, as long as those credentials are not leaked, the web service cannot be spoofed in this manner.
   -------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -367,7 +367,7 @@ Diagram: Diagram 1
 
   **Description:**     SQL Database may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of SQL Database. Consider using a standard authentication mechanism to identify the destination data store.
 
-  **Justification:**   SQL Database will be authenticated using mutual SSL Authentication. So long as its private key stay private, they will be authentic.
+  **Justification:**   SQL Database will be authenticated using mutual SSL Authentication. So long as its private key stays private, they will be authentic.
   -------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -472,7 +472,7 @@ Diagram: Diagram 1
 
   **Description:**     Improper data protection of SQL Database can allow an attacker to read information not intended for disclosure. Review authorization settings.
 
-  **Justification:**   Extra care will be taken to ensure that requests are authorzied.
+  **Justification:**   Extra care will be taken to ensure that requests are authorized.
   -------------------- ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -624,7 +624,7 @@ Diagram: Diagram 1
 
   **Description:**     Web Server may be spoofed by an attacker and this may lead to unauthorized access to Browser Client. Consider using a standard authentication mechanism to identify the source process.
 
-  **Justification:**   The webserver is authenticated by the HTTPS Certificate and our private key.
+  **Justification:**   The webserver is authenticated by the HTTPs Certificate and our private key.
   -------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

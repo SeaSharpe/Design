@@ -1,5 +1,5 @@
-# Threat Modeling Report
-## Created on 2015-11-10 5:48:35 PM
+﻿# Threat Modeling Report
+## Created on 2015-11-10 5:48:36 PM
 
 **Threat Model Name:** Conestoga VideoGame Store Threat Model
 
@@ -172,7 +172,7 @@ Diagram: Diagram 1
 
   **Description:**     Web Server crashes, halts, stops or runs slowly; in all cases violating an availability metric.
 
-  **Justification:**   Stripe does not rely on our web server to operate and if they did we wouldn't care.
+  **Justification:**   Stripe does not rely on our web server to operate.
   -------------------- -------------------------------------------------------------------------------------------------
 
 
@@ -186,7 +186,7 @@ Diagram: Diagram 1
 
   **Description:**     An external agent interrupts data flowing across a trust boundary in either direction.
 
-  **Justification:**   If an ISP, goverment or other entity interupts traffic between a client and us or between us and stripe we would no longer be able to process sales. We would take all aproprate steps to ensure such a thing does not happen.
+  **Justification:**   If an ISP, government or other entity disrupts traffic between our server and clients or stripe we would no longer be able to process sales. We would take all aproprate steps to ensure that this does not occur.
   -------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -200,7 +200,7 @@ Diagram: Diagram 1
 
   **Description:**     Web Server may be able to impersonate the context of Stripe Web Service in order to gain additional privilege.
 
-  **Justification:**   We use stripe so that we don't have to store credit card information on our systems, but the web server could pretend to be stripe (or just be patched to work without stripe) and customer credit card information could be captured. This could do signifigant harm to our brand if it was discovered. We should make sure that this never happens.
+  **Justification:**   We use stripe so that we don't have to store credit card information on our systems, but the web server could pretend to be stripe (or just be patched to work without stripe) and customer credit card information could be captured. This could do signifigant harm to our brand if it was discovered. Precautions will be taken to ensure that this does not happen.
   -------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -214,7 +214,7 @@ Diagram: Diagram 1
 
   **Description:**     Stripe Web Service may be able to remotely execute code for Web Server.
 
-  **Justification:**   We will take care to sanitize all inputs from Stripe and throw exceptions/log errors when unexpected values are recived.
+  **Justification:**   We will sanitize inputs from Stripe and throw exceptions/log errors when unexpected values are received.
   -------------------- --------------------------------------------------------------------------------------------------------------------------
 
 
@@ -228,7 +228,7 @@ Diagram: Diagram 1
 
   **Description:**     An attacker may pass data into Web Server in order to change the flow of program execution within Web Server to the attacker's choosing.
 
-  **Justification:**   User inputs will inevitably effect the flow of our server software but we will take care to ensure that there are not any implementation bugs where a user is able to take actions that they are not authorized to do.
+  **Justification:**   User inputs will inevitably effect the flow of our server software but we will ensure that there are not any implementation bugs where a user is able to take actions that they are not authorized to do.
   -------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -248,7 +248,7 @@ Diagram: Diagram 1
 
   **Description:**     Web Server may be spoofed by an attacker and this may lead to unauthorized access to Stripe Web Service. Consider using a standard authentication mechanism to identify the source process.
 
-  **Justification:**   Stripe provides credentails for the server, as long as those credentails are not leaked, the web service cannot be spoofed in this mannor.
+  **Justification:**   Stripe provides credentails for the server, as long as those credentials are not leaked, the web service cannot be spoofed in this manner.
   -------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -290,7 +290,7 @@ Diagram: Diagram 1
 
   **Description:**     Stripe Web Service crashes, halts, stops or runs slowly; in all cases violating an availability metric.
 
-  **Justification:**   If the Stripe service has issues, we will no longer be able to complete sales; however, we can still function as a social hub for game & event information. This issue could cost us revenue. We trust that to protect their brand name and to not loose out of revenue themselves, Stripe will strive to keep their downtime to a minimum.
+  **Justification:**   If the Stripe service has issues, we will no longer be able to complete sales; however, we can still function as a social hub for game & event information. This issue could cost us revenue. We trust that to protect their brand name and minimize financial loss, Stripe will strive to keep their downtime to a minimum.
   -------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -304,7 +304,7 @@ Diagram: Diagram 1
 
   **Description:**     An external agent interrupts data flowing across a trust boundary in either direction.
 
-  **Justification:**   If an ISP, goverment or other entity interupts traffic between a client and us or between us and stripe we would no longer be able to process sales. We would take all aproprate steps to ensure such a thing does not happen.
+  **Justification:**  If an ISP, government or other entity disrupts traffic between our server and clients or stripe we would no longer be able to process sales. We would take all aproprate steps to ensure that this does not occur.
   -------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -367,7 +367,7 @@ Diagram: Diagram 1
 
   **Description:**     SQL Database may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of SQL Database. Consider using a standard authentication mechanism to identify the destination data store.
 
-  **Justification:**   SQL Database will be authenticated using mutual SSL Authentication. So long as it's private key stays private this will serve to authenticate it.
+  **Justification:**   SQL Database will be authenticated using mutual SSL Authentication. So long as its private key stay private, they will be authentic.
   -------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -395,7 +395,7 @@ Diagram: Diagram 1
 
   **Description:**     Credentials held at the server are often disclosed or tampered with and credentials stored on the client are often stolen. For server side, consider storing a salted hash of the credentials instead of storing the credentials themselves. If this is not possible due to business requirements, be sure to encrypt the credentials before storage, using an SDL-approved mechanism. For client side, if storing credentials is required, encrypt them and protect the data store in which they're stored
 
-  **Justification:**   We implement hashing and salting of user passwords. Actual passwords are never stored in logs or the db and are only in memory for as long as it takes to hash them.
+  **Justification:**   We implement hashing and salting of user passwords. Actual passwords are never stored in logs or the db and are only in memory for as long as is required to hash them.
   -------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -409,7 +409,7 @@ Diagram: Diagram 1
 
   **Description:**     Does Web Server or SQL Database take explicit steps to control resource consumption? Resource consumption attacks can be hard to deal with, and there are times that it makes sense to let the OS do the job. Be careful that your resource requests don't deadlock, and that they do timeout.
 
-  **Justification:**   Auditing should be done on the most time consuming database tasks to find out if they are malicious. If so, steps should be taken to automatically ban or block users from creating malicious requests aimed at tieing up resources.
+  **Justification:**   Auditing should be done on the most time consuming database tasks to find out if they are malicious. If so, steps should be taken to automatically ban or block users from creating malicious requests aimed at tying up resources.
   -------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -430,7 +430,7 @@ Diagram: Diagram 1
 
   **Description:**     SQL Database may be spoofed by an attacker and this may lead to incorrect data delivered to Web Server. Consider using a standard authentication mechanism to identify the source data store.
 
-  **Justification:**   SQL Database will be authenticated using mutual SSL Authentication. So long as it's private key stays private this will serve to authenticate it.
+  **Justification:**   SQL Database will be authenticated using mutual SSL Authentication. So long as its private key remains private it can be assumed as authentic.
   -------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -472,7 +472,7 @@ Diagram: Diagram 1
 
   **Description:**     Improper data protection of SQL Database can allow an attacker to read information not intended for disclosure. Review authorization settings.
 
-  **Justification:**   Extra care will be taken to ensure that requsts are authorzied.
+  **Justification:**   Extra care will be taken to ensure that requests are authorzied.
   -------------------- ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -492,7 +492,7 @@ Diagram: Diagram 1
 
   **Description:**     Browser Client may be spoofed by an attacker and this may lead to unauthorized access to Web Server. Consider using a standard authentication mechanism to identify the source process.
 
-  **Justification:**   A token stored in an HTTP cookie will be used to authenticate the client is authentic. Cookies will timeout periodically to mitigate the risk of them being stolen.
+  **Justification:**   A token stored in an HTTP cookie will be used to authenticate the client. Cookies will timeout periodically to mitigate the risk of being stolen.
   -------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -534,7 +534,7 @@ Diagram: Diagram 1
 
   **Description:**     Web Server crashes, halts, stops or runs slowly; in all cases violating an availability metric.
 
-  **Justification:**   Such problems would cost us business. We should ensure that our platform is as stable as possible.
+  **Justification:**   Such problems would cost us business. We will ensure that our platform is as stable as possible.
   -------------------- ----------------------------------------------------------------------------------------------------
 
 
@@ -548,7 +548,7 @@ Diagram: Diagram 1
 
   **Description:**     An external agent interrupts data flowing across a trust boundary in either direction.
 
-  **Justification:**   If an ISP, goverment or other entity interupts traffic between a client and us or between us and stripe we would no longer be able to serve our customers. We would take all aproprate steps to ensure such a thing does not happen.
+  **Justification:**   If an ISP, government or other entity disrupts traffic between our server and clients or stripe we would no longer be able to process sales. We would take all aproprate steps to ensure that this does not occur.
   -------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -576,7 +576,7 @@ Diagram: Diagram 1
 
   **Description:**     Browser Client may be able to remotely execute code for Web Server.
 
-  **Justification:**   Rasor 5 should handle sanatization of all form inputs but testing should be done to verify that user inputs can never allow the user to compromize our web server.
+  **Justification:**   Rasor 5 should handle sanatization of all form inputs but testing should be done to verify that user inputs can never allow the user to compromise our web server.
   -------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -680,7 +680,7 @@ Diagram: Diagram 1
 
   **Description:**     An external agent interrupts data flowing across a trust boundary in either direction.
 
-  **Justification:**   If an ISP, goverment or other entity interupts traffic between a client and us or between us and stripe we would no longer be able to serve our customers. We would take all aproprate steps to ensure such a thing does not happen.
+  **Justification:**   If an ISP, government or other entity disrupts traffic between our server and clients or stripe we would no longer be able to process sales. We would take all aproprate steps to ensure that this does not occur.
   -------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

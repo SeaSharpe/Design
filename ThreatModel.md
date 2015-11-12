@@ -130,7 +130,7 @@ Diagram: Diagram 1
 
   **Description:**     Stripe Web Service may be spoofed by an attacker and this may lead to unauthorized access to Web Server. Consider using a standard authentication mechanism to identify the source process.
 
-  **Justification:**   Stripe is identified by it's HTTPs certificate.
+  **Justification:**   Stripe is identified by it's HTTPS certificate.
   -------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -624,7 +624,7 @@ Diagram: Diagram 1
 
   **Description:**     Web Server may be spoofed by an attacker and this may lead to unauthorized access to Browser Client. Consider using a standard authentication mechanism to identify the source process.
 
-  **Justification:**   The webserver is authenticated by the HTTPs Certificate and our private key.
+  **Justification:**   The webserver is authenticated by the HTTPS Certificate and our private key.
   -------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

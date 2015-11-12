@@ -95,8 +95,8 @@ namespace LoginExample.Models
         public virtual Address ShippingAddress { get; set; }
         public virtual Member Member { get; set; }
         public virtual Employee Aprover { get; set; }
-        public DateTime OrderPlacementDate { get; set; }
-        public DateTime ShipDate { get; set; }
+        public DateTime? OrderPlacementDate { get; set; }
+        public DateTime? ShipDate { get; set; }
         public bool IsProcessed { get; set; }
     }
 
@@ -125,11 +125,13 @@ namespace LoginExample.Models
     public class Game
     {
         public int Id { get; set; }
+        [Required, MinLength(1), MaxLength(50)]
         public string Name { get; set; }
         public DateTime ReleaseDate { get; set; }
         public decimal SuggestedRetailPrice { get; set; }
         public virtual List<Category> Categories { get; set; }
         public virtual List<Review> Reviews { get; set; }
+        [Required]
         public virtual Platform Platform { get; set; }
         //public virtual List<WishList> WishList { get; set; }
     }
@@ -178,6 +180,7 @@ namespace LoginExample.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity), Range(8000, 8999)]
         public int Id { get; set; }
+        [Required, MaxLength(50), MinLength(1)]
         public string Name { get; set; }
         public virtual List<Game> Games { get; set; }
     }

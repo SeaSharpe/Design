@@ -12,7 +12,7 @@
 **Description:** This service allows customers to purchase and review
 games, create wish lists and track game-related events.
 
-**Assumptions:** We assume that it is in Stripes interests to provide a
+**Assumptions:** We assume that it is in Stripe's interests to provide a
 stable, secure service with minimal downtime.
 
 **External Dependencies:** Stripe's Credit Card Payment Service
@@ -61,7 +61,7 @@ Diagram: Diagram 1
 
   **Description:**     If Browser Client is given access to memory, such as shared memory or pointers, or is given the ability to control what Stripe Web Service executes (for example, passing back a function pointer.), then Browser Client can tamper with Stripe Web Service. Consider if the function could work with less access to memory, such as passing data rather than pointers. Copy in data provided, and then validate it.
 
-  **Justification:**   The Stripe web service is not under our control and the only information that could be compromised in such an event is the customer's information. If the customer's computer was already compromised their keystrokes may already have been logged. We cannot help the customer in such as situation.
+  **Justification:**   The Stripe web service is not under our control and the only information that could be compromised in such an event is the customer's information. If the customer's computer was already compromised their keystrokes may already have been logged. We cannot help the customer in such a situation.
   -------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

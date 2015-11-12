@@ -32,4 +32,7 @@ Nicole absent (injured), Manny absent (busy)
 - Completed Data Validation document
 - Noted similarities to Dan's Data Dictionary document, Dan planning to adjust
 
+### Moving Forward
+- Peter to put together hand-in document
+
 **Next Meeting November 11th**

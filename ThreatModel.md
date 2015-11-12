@@ -1,11 +1,11 @@
 ﻿# Threat Modeling Report
-## Created on 2015-11-10 5:48:36 PM
+## Created on 2015-11-10 5:48:35 PM
 
 **Threat Model Name:** Conestoga VideoGame Store Threat Model
 
 **Owner:** Sea Sharpe
 
-**Reviewer:**
+**Reviewer:** Dan Hofstede
 
 **Contributors:** John Steel
 

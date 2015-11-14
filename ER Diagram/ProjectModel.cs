@@ -31,11 +31,8 @@ namespace LoginExample.Models
 
     public class User
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity), Range(10000000, 19999999)]
-        public int Id { get; set; }
-        public string Email { get; set; }
-        [Required, MinLength(4), MaxLength(50)]
-        public string DisplayName { get; set; }
+        [NotMapped]
+        public override bool PhoneNumberConfirmed { get; set; }
         [Required] // NOT NULL
         [Column(TypeName = "char"), StringLength(1)] // CHAR(1)
         public string Gender { get; set; }
@@ -47,28 +44,23 @@ namespace LoginExample.Models
         public DateTime DateOfBirth { get; set; }
         [Required]
         public DateTime DateOfRegistration { get; set; }
-        [Required, Column(TypeName = "char"), StringLength(10)]
-        public string PhoneNumber { get; set; }
     }
 
     public class Member
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity), Range(30000000, 39999999)]
-        public int Id { get; set; }
         [Required]
-        public virtual User User { get; set; }
+        public virtual ApplicationUser User { get; set; }
+        public int Id { get; set; }
         public bool IsEmailVerified { get; set; }
         public bool IsEmailMarketingAllowed { get; set; }
         public int StripeID { get; set; }
-        //public virtual List<WishList> WishList { get; set; }
     }
 
     public class Employee
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity), Range(200000, 299999)]
-        public int Id { get; set; }
         [Required]
-        public virtual User User { get; set; }
+        public virtual ApplicationUser User { get; set; }
+        public int Id { get; set; }
     }
 
     public class Address
@@ -138,7 +130,6 @@ namespace LoginExample.Models
 
     public class Review
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity), Range(900000000, 999999999)]
         public int Id { get; set; }
         [Required]
         public virtual Game Game { get; set; }
@@ -169,7 +160,6 @@ namespace LoginExample.Models
 
     public class Platform
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity), Range(800, 899)]
         public int Id { get; set; }
         [Required, MaxLength(50), MinLength(1)]
         public string Name { get; set; }
@@ -178,7 +168,6 @@ namespace LoginExample.Models
 
     public class Category
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity), Range(8000, 8999)]
         public int Id { get; set; }
         [Required, MaxLength(50), MinLength(1)]
         public string Name { get; set; }
@@ -187,7 +176,6 @@ namespace LoginExample.Models
 
     public class Event
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity), Range(4000000, 4999999)]
         public int Id { get; set; }
         [Required]
         public virtual Employee Employee { get; set; }
